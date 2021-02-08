@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>TaxaJuros.API</name>
+    </assembly>
+    <members>
+        <member name="M:TaxaJuros.API.Controllers.TaxaJurosController.#ctor(TaxaJuros.API.Service.TaxaJurosService)">
+            <summary>
+            Construtor
+            </summary>
+            <param name="taxaJurosService"></param>
+        </member>
+        <member name="M:TaxaJuros.API.Controllers.TaxaJurosController.Get">
+            <summary>
+            Método responsável para retornar a taxa de juros
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:TaxaJuros.API.Extensions.DecimalExtensions">
+            <summary>
+            Classe para conversão no formato decimal conforme a cultura pt-BR
+            </summary>
+        </member>
+        <member name="M:TaxaJuros.API.Extensions.DecimalExtensions.ToDecimal(System.Object)">
+            <summary>
+            Método responsável para converter um decimal para o formato brasileiro
+            </summary>
+        </member>
+    </members>
+</doc>

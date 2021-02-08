@@ -11,10 +11,18 @@ namespace TaxaJuros.API.Controllers
     public class TaxaJurosController : ControllerBase
     {
         private readonly TaxaJurosService _taxaJurosService;
-      
+
+        /// <summary>
+        /// Construtor
+        /// </summary>
+        /// <param name="taxaJurosService"></param>
         public TaxaJurosController(TaxaJurosService taxaJurosService) => _taxaJurosService = taxaJurosService;
 
-       
+        /// <summary>
+        /// Método responsável para retornar a taxa de juros
+        /// </summary>
+        /// <returns></returns>
+        [HttpGet]
         public async Task<IActionResult> Get()
         {
             try
@@ -25,7 +33,7 @@ namespace TaxaJuros.API.Controllers
             }
             catch (Exception ex)
             {
-                return BadRequest("Ocorreu um erro na sua requisição");
+                return BadRequest("Ocorreu um erro na sua requisição" + ex.Message);
             }
 
         }
