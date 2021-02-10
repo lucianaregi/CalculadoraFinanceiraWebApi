@@ -3,9 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30907.101
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TaxaJuros.API", "src\TaxaJurosAPI\TaxaJuros.API\TaxaJuros.API.csproj", "{BD23F919-2ACB-426D-86FC-B38912219727}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TaxaJuros.API", "src\TaxaJurosAPI\TaxaJuros.API\TaxaJuros.API.csproj", "{BD23F919-2ACB-426D-86FC-B38912219727}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TaxaJurosxUnitTest", "src\TaxaJurosAPI\Testes\TaxaJurosxUnitTest\TaxaJurosxUnitTest.csproj", "{85B825D1-1A33-47B0-BE6D-CC2066F0EBAF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TaxaJurosxUnitTest", "src\TaxaJurosAPI\Testes\TaxaJurosxUnitTest\TaxaJurosxUnitTest.csproj", "{85B825D1-1A33-47B0-BE6D-CC2066F0EBAF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CalculaJuros.API", "src\CalculaJurosAPI\CalculaJuros.API\CalculaJuros.API.csproj", "{881D6F40-7470-4F25-91DC-A788880FAA01}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{85B825D1-1A33-47B0-BE6D-CC2066F0EBAF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{85B825D1-1A33-47B0-BE6D-CC2066F0EBAF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{85B825D1-1A33-47B0-BE6D-CC2066F0EBAF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{881D6F40-7470-4F25-91DC-A788880FAA01}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{881D6F40-7470-4F25-91DC-A788880FAA01}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{881D6F40-7470-4F25-91DC-A788880FAA01}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{881D6F40-7470-4F25-91DC-A788880FAA01}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
