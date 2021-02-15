@@ -6,7 +6,7 @@ using TaxaJuros.API.Service;
 
 namespace TaxaJuros.API.Controllers
 {
-    [Route("api/taxaJuros")]
+    [Route("api/v1/taxaJuros")]
     [ApiController]
     public class TaxaJurosController : ControllerBase
     {

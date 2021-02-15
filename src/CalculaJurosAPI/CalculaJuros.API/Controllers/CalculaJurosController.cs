@@ -8,14 +8,24 @@ using System.Threading.Tasks;
 
 namespace CalculaJuros.API.Controllers
 {
-    [Route("calculajuros")]
+    [Route("api/v1/calculajuros")]
     [ApiController]
     public class CalculaJurosController : ControllerBase
     {
         private readonly CalculaJurosService _calculaJurosService;
 
+        /// <summary>
+        /// Construtor
+        /// </summary>
+        /// <param name="calculaJurosService"></param>
         public CalculaJurosController(CalculaJurosService calculaJurosService) => _calculaJurosService = calculaJurosService;
 
+        /// <summary>
+        /// Método responsável para retornar o cálculo do juros
+        /// </summary>
+        /// <param name="valorInicial"></param>
+        /// <param name="meses"></param>
+        /// <returns></returns>
         [HttpGet]
         public async Task<decimal> Get([FromQuery] decimal valorInicial, [FromQuery] int meses)
         {

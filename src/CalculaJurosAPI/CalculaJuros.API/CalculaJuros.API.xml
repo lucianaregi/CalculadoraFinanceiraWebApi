@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>CalculaJuros.API</name>
+    </assembly>
+    <members>
+        <member name="M:CalculaJuros.API.Controllers.CalculaJurosController.#ctor(CalculaJuros.API.Services.CalculaJurosService)">
+            <summary>
+            Construtor
+            </summary>
+            <param name="calculaJurosService"></param>
+        </member>
+        <member name="M:CalculaJuros.API.Controllers.CalculaJurosController.Get(System.Decimal,System.Int32)">
+            <summary>
+            Método responsável para retornar o cálculo do juros
+            </summary>
+            <param name="valorInicial"></param>
+            <param name="meses"></param>
+            <returns></returns>
+        </member>
+        <member name="T:TaxaJuros.API.Extensions.DecimalExtensions">
+            <summary>
+            Classe para conversão no formato decimal conforme a cultura pt-BR
+            </summary>
+        </member>
+        <member name="M:TaxaJuros.API.Extensions.DecimalExtensions.ToDecimal(System.Object)">
+            <summary>
+            Método responsável para converter um decimal para o formato brasileiro
+            </summary>
+        </member>
+    </members>
+</doc>
