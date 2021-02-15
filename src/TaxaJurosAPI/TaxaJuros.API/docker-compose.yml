@@ -1,0 +1,16 @@
+version: "3.9"
+networks: 
+  taxajurosNet:
+
+services:
+
+  taxajuros:
+    build: 
+      context: .
+      dockerfile: Dockerfile
+    container_name: taxajuros
+    networks: 
+      - taxajurosNet
+    ports: 
+      - 8000:80
+  
