@@ -31,9 +31,9 @@ namespace TaxaJuros.API.Controllers
 
                 return Ok(taxaJuros.ToDecimal());
             }
-            catch (Exception ex)
+            catch (Exception)
             {
-                return BadRequest("Ocorreu um erro na sua requisição" + ex.Message);
+                return BadRequest("Ocorreu um erro na sua requisição");
             }
 
         }

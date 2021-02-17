@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Globalization;
 
-namespace TaxaJuros.API.Extensions
+namespace CalculaJuros.API.Extensions
 {
     /// <summary>
     /// Classe para conversão no formato decimal conforme a cultura pt-BR

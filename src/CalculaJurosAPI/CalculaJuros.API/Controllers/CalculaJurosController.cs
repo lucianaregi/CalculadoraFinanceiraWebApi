@@ -1,10 +1,13 @@
-﻿using CalculaJuros.API.Services;
+﻿using CalculaJuros.API.Extensions;
+using CalculaJuros.API.Services;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+
+
 
 namespace CalculaJuros.API.Controllers
 {
@@ -27,9 +30,19 @@ namespace CalculaJuros.API.Controllers
         /// <param name="meses"></param>
         /// <returns></returns>
         [HttpGet]
-        public async Task<decimal> Get([FromQuery] decimal valorInicial, [FromQuery] int meses)
+        public async Task<IActionResult> Get([FromQuery] decimal valorInicial, [FromQuery] int meses)
         {
-            return await _calculaJurosService.CalcularJurosAsync(valorInicial, meses);
+            try
+            {
+                var valorFinal = await _calculaJurosService.CalcularJurosAsync(valorInicial, meses);
+                
+                return Ok(valorFinal.ToDecimal());
+            }
+            catch (Exception ex)
+            {
+                return BadRequest("Ocorreu um erro na sua requisição" + ex.Message);
+            }
+          
         }
 
     }

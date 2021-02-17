@@ -1,24 +1,35 @@
+<<<<<<< Updated upstream
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Net.Http;
+=======
+﻿using CalculaJuros.API.Extensions;
+using System;
+>>>>>>> Stashed changes
 using System.Threading.Tasks;
-using TaxaJuros.API.Extensions;
+
 
 namespace CalculaJuros.API.Services
 {
     public class CalculaJurosService
     {
-        public async Task<decimal> CalcularJurosAsync(decimal valorInicial, int meses)
+        public async Task<string> CalcularJurosAsync(decimal valorInicial, int meses)
         {
+<<<<<<< Updated upstream
             var taxaJuros = await ObterTaxaDeJurosAsync();
             //var taxaJuros = 0.01m;
             var potencia = (decimal)Math.Pow(1 + ((double)taxaJuros), meses);
+=======
+            
+            //var taxaJuros = await _api1Service.ObterTaxaDeJurosAsync();
+            var juros = decimal.Parse("0,01");
+            //var taxaJuros = 0.01m;
+            var potencia = (decimal)Math.Pow(1 + ((double)juros), meses);
+>>>>>>> Stashed changes
             var valorCalculado = Convert.ToDecimal(valorInicial * potencia);
             var valorFinal = Math.Round(valorCalculado, 2);
-            return valorFinal;
-
-
+            return valorFinal.ToDecimal();
         }
 
         public  async Task<decimal> ObterTaxaDeJurosAsync()
