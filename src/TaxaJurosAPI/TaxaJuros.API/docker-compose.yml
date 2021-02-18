@@ -12,5 +12,5 @@ services:
     networks: 
       - taxajurosNet
     ports: 
-      - 8000:80
+      - 8001:80
   

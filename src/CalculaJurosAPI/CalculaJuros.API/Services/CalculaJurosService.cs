@@ -1,12 +1,7 @@
-<<<<<<< Updated upstream
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
+﻿
 using System.Net.Http;
-=======
 ﻿using CalculaJuros.API.Extensions;
 using System;
->>>>>>> Stashed changes
 using System.Threading.Tasks;
 
 
@@ -16,26 +11,36 @@ namespace CalculaJuros.API.Services
     {
         public async Task<string> CalcularJurosAsync(decimal valorInicial, int meses)
         {
-<<<<<<< Updated upstream
-            var taxaJuros = await ObterTaxaDeJurosAsync();
-            //var taxaJuros = 0.01m;
-            var potencia = (decimal)Math.Pow(1 + ((double)taxaJuros), meses);
-=======
+            string mensagem = string.Empty;
+            try 
+            { 
+                if(valorInicial > 0 && meses > 0 && meses <= 12)
+                {
+                    var taxaJuros = await ObterTaxaDeJurosAsync();
+                    var potencia = (decimal)Math.Pow(1 + ((double)taxaJuros), meses);
+                    var valorCalculado = Convert.ToDecimal(valorInicial * potencia);
+                    var valorFinal = Math.Round(valorCalculado, 2);
+
+                    return valorFinal.ToDecimal();
+                }
+                else
+                {
+                    mensagem = "Certifique-se que os valores sejam válidos.";
+                    return mensagem;
+                }
+            } 
+            catch (Exception) 
+            {
+                mensagem = "Ocorreu um erro.";
+                return mensagem;
+            }
             
-            //var taxaJuros = await _api1Service.ObterTaxaDeJurosAsync();
-            var juros = decimal.Parse("0,01");
-            //var taxaJuros = 0.01m;
-            var potencia = (decimal)Math.Pow(1 + ((double)juros), meses);
->>>>>>> Stashed changes
-            var valorCalculado = Convert.ToDecimal(valorInicial * potencia);
-            var valorFinal = Math.Round(valorCalculado, 2);
-            return valorFinal.ToDecimal();
         }
 
         public  async Task<decimal> ObterTaxaDeJurosAsync()
         {
             HttpClient httpClient = new HttpClient();
-            string url = "http://localhost:8000/api/taxaJuros";
+            string url = "http://localhost:8001/api/v1/taxaJuros";
             string resultado = string.Empty;
                 
             try

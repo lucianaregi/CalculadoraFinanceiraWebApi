@@ -28,8 +28,8 @@ namespace TaxaJuros.API.Controllers
             try
             {
                 var taxaJuros = await _taxaJurosService.GetTaxaJuros();
-
-                return Ok(taxaJuros.ToDecimal());
+                var juros = Math.Round(taxaJuros, 2);
+                return Ok(juros.ToDecimal());
             }
             catch (Exception)
             {

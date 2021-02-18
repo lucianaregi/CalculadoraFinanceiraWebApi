@@ -18,12 +18,24 @@
             <param name="meses"></param>
             <returns></returns>
         </member>
-        <member name="T:TaxaJuros.API.Extensions.DecimalExtensions">
+        <member name="M:CalculaJuros.API.Controllers.ShowMeTheCodeController.#ctor(CalculaJuros.API.Services.ShowMeTheCodeService)">
+            <summary>
+            Construtor
+            </summary>
+            <param name="showMeTheCodeService"></param>
+        </member>
+        <member name="M:CalculaJuros.API.Controllers.ShowMeTheCodeController.GetUrlGit">
+            <summary>
+            Retorna a URL do github do sistema de api
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:CalculaJuros.API.Extensions.DecimalExtensions">
             <summary>
             Classe para conversão no formato decimal conforme a cultura pt-BR
             </summary>
         </member>
-        <member name="M:TaxaJuros.API.Extensions.DecimalExtensions.ToDecimal(System.Object)">
+        <member name="M:CalculaJuros.API.Extensions.DecimalExtensions.ToDecimal(System.Object)">
             <summary>
             Método responsável para converter um decimal para o formato brasileiro
             </summary>

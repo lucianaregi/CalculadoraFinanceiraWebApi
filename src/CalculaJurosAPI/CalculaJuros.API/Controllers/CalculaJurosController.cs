@@ -36,7 +36,7 @@ namespace CalculaJuros.API.Controllers
             {
                 var valorFinal = await _calculaJurosService.CalcularJurosAsync(valorInicial, meses);
                 
-                return Ok(valorFinal.ToDecimal());
+                return Ok(valorFinal);
             }
             catch (Exception ex)
             {

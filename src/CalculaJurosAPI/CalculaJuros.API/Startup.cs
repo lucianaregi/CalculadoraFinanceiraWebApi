@@ -29,6 +29,7 @@ namespace CalculaJuros.API
         {
             services.AddControllers();
             services.AddScoped<CalculaJurosService>();
+            services.AddScoped<ShowMeTheCodeService>();
 
             services.AddSwaggerGen(options =>
             {
