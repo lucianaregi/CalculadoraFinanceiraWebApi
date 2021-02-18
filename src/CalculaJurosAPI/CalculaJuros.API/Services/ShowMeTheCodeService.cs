@@ -9,7 +9,7 @@ namespace CalculaJuros.API.Services
     {
         public string GetUrlGitHub()
         {
-            return "https://github.com/lucianaregi";
+            return "https://github.com/lucianaregi/CalculadoraFinanceiraWebApi";
         }
     }
 }
